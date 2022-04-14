@@ -3,9 +3,7 @@
 
 name: user-management-schema
 
-on: 
-  release:
-    types: [published]
+on: [push]
 
 jobs:
   build:
