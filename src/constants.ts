@@ -1,0 +1,17 @@
+export const SCHEMAS = {
+  ACCOUNT: 'Account',
+  APPLICATION: 'Application',
+  AUDIT: 'Audit',
+  FUSION_CONFIG: 'FusionConfig',
+  MERCHANT_SETTINGS: 'MerchantSettings',
+  PRODUCT_SETTINGS: 'ProductSettings',
+  THEME: 'Theme',
+  USER_METADATA: 'UserMetadata',
+  ACCOUNT_METADATA: 'AccountMetadata',
+  ROLE: 'Role',
+  USER: 'User',
+  API_USER: 'ApiUser',
+  MERCHANT: 'Merchant',
+  CUSTOMER: 'Customer',
+  INVITE: 'Invite',
+};
