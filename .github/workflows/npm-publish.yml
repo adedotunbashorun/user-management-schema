@@ -3,7 +3,9 @@
 
 name: user-management-schema
 
-on: [push]
+on: 
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -14,6 +16,22 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+  
+  release: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          semantic_version: 15.13.28  # It is recommended to specify specifying version range
+                                      # for semantic-release.
+      run: npm ci
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npm run semantic-release
 
   publish-npm:
     needs: build
@@ -27,6 +45,4 @@ jobs:
       - run: npm ci
       - run: npm publish --access public
         env:
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
