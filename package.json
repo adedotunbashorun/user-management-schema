@@ -1,8 +1,8 @@
 {
-  "name": "@adedotunbashorun/event-library",
+  "name": "@adedotunbashorun/user-management-schema",
   "version": "0.0.1",
   "description": "",
-  "repository": "git@github.com:adedotunbashorun/general/event-library.git",
+  "repository": "https://github.com/adedotunbashorun/user-management-schema.git",
   "author": "Adedotun Bashorun <adedotunolawale@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
