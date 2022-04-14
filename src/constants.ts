@@ -4,7 +4,6 @@ export const SCHEMAS = {
   AUDIT: 'Audit',
   FUSION_CONFIG: 'FusionConfig',
   MERCHANT_SETTINGS: 'MerchantSettings',
-  PRODUCT_SETTINGS: 'ProductSettings',
   THEME: 'Theme',
   USER_METADATA: 'UserMetadata',
   ACCOUNT_METADATA: 'AccountMetadata',
