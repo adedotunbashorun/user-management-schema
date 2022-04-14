@@ -86,8 +86,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
-  "publishConfig": {
-    "@indicina1/registry": "https://gitlab.com/api/v4/projects/34401703/packages/npm/"
   }
 }
