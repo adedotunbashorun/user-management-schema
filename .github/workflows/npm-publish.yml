@@ -25,7 +25,6 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run semantic-release
       - run: npm publish --access public
         env:
           GH_TOKEN: ${{secrets.GH_TOKEN}}
