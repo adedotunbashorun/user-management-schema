@@ -27,11 +27,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16
       - name: Install dependencies
         run: npx ci
-      - name: Test
-        run: npm run test:unit --if-present
       - name: Build
         run: npm run build      
       - name: Release
