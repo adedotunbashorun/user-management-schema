@@ -5,10 +5,6 @@ import { isEmail } from 'validator';
 import { AccountStatus, AccountType, SCHEMAS } from '..';
 import { MerchantSettingsDocument } from '../merchant/merchantSettings.schema';
 import { AccountMetadataDocument } from '../metadata/accountMetadata.schema';
-import {
-  FusionSetupConfig,
-  FusionSetupConfigSchema,
-} from './fusionSetupConfig.schema';
 
 export type MerchantDocument = Merchant & Document;
 
@@ -44,9 +40,6 @@ export class Merchant {
 
   @Prop()
   faviconUrl: string;
-
-  @Prop({ type: FusionSetupConfigSchema })
-  fusionSetupConfig: FusionSetupConfig;
 
   @Prop({
     type: MongooseSchema.Types.ObjectId,
