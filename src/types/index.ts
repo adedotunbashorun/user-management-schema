@@ -5,6 +5,14 @@ export enum BusinessType {
   Cooperative = 'Cooperative',
 }
 
+export enum UserRoleType {
+  Payroll = 'pay',
+  HRM = 'people',
+  Pension = 'pension',
+}
+
+export const UserRoleTypes = Object.values(UserRoleType);
+
 export enum AccountType {
   Merchant = 'Merchant',
   Customer = 'Customer',

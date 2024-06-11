@@ -5,7 +5,7 @@ import { isEmail } from 'validator';
 import { AccountDocument, SCHEMAS } from '..';
 import { UserMetadataDocument } from '../metadata/userMetadata.schema';
 import { RoleDocument } from '../role/role.schema';
-import { UserStatus } from '../types';
+import { UserStatus, UserRoleTypes } from '../types';
 
 export type UserDocument = User & Document;
 
@@ -68,6 +68,9 @@ export class User {
 
   @Prop()
   failedLoginAttempts: number;
+
+  @Prop({ required: true, enum: UserRoleTypes })
+  roleType: string;
 
   @Prop()
   createdAt: Date;
