@@ -15,9 +15,6 @@ export class ApiUser {
   @Prop({ required: true })
   secretKey: string;
 
-  @Prop()
-  fusionId: string;
-
   @Prop({
     type: MongooseSchema.Types.ObjectId,
     ref: SCHEMAS.ACCOUNT,
